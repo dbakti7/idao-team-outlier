@@ -36,6 +36,7 @@ def split_file():
                 writeFile = open(fileName, 'a', newline='')
                 w = csv.writer(writeFile, delimiter=',')
             w.writerow(row)
+        writeFile.close()
 
 def parseData(weekNumber):
     # parse the file for the corresponding weekNumber 
