@@ -38,7 +38,7 @@ def split_file():
             w.writerow(row)
         writeFile.close()
 
-def parseData(weekNumber):
+def parseData(weekNumber, data_size = -1):
     # parse the file for the corresponding weekNumber 
     # into the following dictionary format:
     # {user_id: [[date, id1, id2, id3], ...]}
@@ -57,6 +57,9 @@ def parseData(weekNumber):
                 data[row[user_id]].append([row[date], row[id1], row[id2], row[id3]])
             else:
                 data[row[user_id]] = [[row[date], row[id1], row[id2], row[id3]]]
+            data_size -= 1
+            if(data_size == 0):
+                break
     return data
 
 
