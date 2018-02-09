@@ -60,5 +60,5 @@ def parseData(weekNumber):
     return data
 
 
-data = parseData(1)
-print(len(data))
+# data = parseData(1)
+# print(len(data))
